@@ -55,3 +55,31 @@ func (userService *userService) Login(params request.Login) (err error, user mod
 	}
 	return
 }
+
+func (userService *userService) CheckPassword(mobile string, oldPassword string) error {
+	var user models.User
+	var err error
+	var result = global.App.DB.Model(&models.User{}).Where("mobile = ?", mobile).First(&user)
+	if result.RowsAffected == 0 {
+		err = errors.New("此电话号码并没有注册过用户")
+		return err
+	}
+	if !utils.BcryptMakeCheck([]byte(oldPassword), user.Password) {
+		err = errors.New("旧密码错误，无法更改密码，请确认")
+		return err
+	}
+	return nil
+}
+
+func (userService *userService) UpdatePassword(params request.ChangePassword) error {
+	//var user models.User
+	err := userService.CheckPassword(params.Mobile, params.OldPassword)
+	if err != nil {
+		return err
+	}
+	result := global.App.DB.Model(&models.User{}).Where("mobile = ?", params.Mobile).Update("password", utils.BcryptMake([]byte(params.NewPassword)))
+	if result.RowsAffected == 0 {
+		return errors.New("修改密码失败，请联系管理员")
+	}
+	return nil
+}

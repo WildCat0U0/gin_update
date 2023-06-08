@@ -44,3 +44,24 @@ func (Login Login) GetMessages() validatorMessages {
 		"password.required": "密码不能为空",
 	}
 }
+
+type ChangePassword struct {
+	Mobile      string `json:"mobile" binding:"required,mobile,min=11,max=11" form:"mobile"'`
+	OldPassword string `json:"old_password" binding:"required,min=6,max=20" form:"old_password"`
+	NewPassword string `json:"new_password" binding:"required,min=6,max=20" form:"new_password"`
+}
+
+func (ChangePassword ChangePassword) GetMessages() validatorMessages {
+	return validatorMessages{
+		"mobile.required":       "手机号不能为空",
+		"mobile.mobile":         "手机号格式不正确",
+		"old_password.required": "旧密码不能为空",
+		"new_password.required": "新密码不能为空",
+		"old_password.min":      "旧密码长度不能小于6",
+		"old_password.max":      "旧密码长度不能大于20",
+		"new_password.min":      "新密码长度不能小于6",
+		"new_password.max":      "新密码长度不能大于20",
+		"old_password.password": "密码必须包含数字和字母",
+		"new_password.password": "新密码必须包含数字和字母",
+	}
+}
