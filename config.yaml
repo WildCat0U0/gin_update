@@ -1,0 +1,57 @@
+app:
+  env : local # 环境名称
+  port : 8888 # 服务器监听端口
+  app_name : gin-app
+  app_url : http://localhost
+log:
+#  Level       string `mapstructure:"level" json:"level" yaml:"level"`
+#  RootDir    	string `mapstructure:"root_dir" json:"root_dir" yaml:"root_dir"`
+#  FileName    string `mapstructure:"file_name" json:"file_name" yaml:"file_name"`
+#  Format      string `mapstructure:"format" json:"format" yaml:"format"`
+#  ShowLine    bool   `mapstructure:"show_line" json:"show_line" yaml:"show_line"`
+#  MaxBackups	int    `mapstructure:"max_backups" json:"max_backups" yaml:"max_backups"`
+#  MaxSize     int    `mapstructure:"max_size" json:"max_size" yaml:"max_size"`
+#  MaxAge 		int    `mapstructure:"max_age" json:"max_age" yaml:"max_age"`
+#  Compress    bool   `mapstructure:"compress" json:"compress" yaml:"compress"`
+  level : info # 日志级别
+  root_dir : ./storage/logs # 日志根目录
+  filename : app.log # 日志文件名称
+  format : json # json, text
+  show_line : true # 是否显示行号
+  max_backups : 3 # 最大备份数
+  max_size : 10 # 最大尺寸,单位MB
+  max_age : 7 # 最大保存时间,单位天
+  compress : true # 是否压缩
+
+
+#  Driver   string `mapstructure:"driver" json:"driver" yaml:"driver"` // mysql
+#  Host     string `mapstructure:"host" json:"host" yaml:"host"`       //
+#  Port     string `mapstructure:"port" json:"port" yaml:"port"`
+#  Database string `mapstructure:"database" json:"database" yaml:"database"`
+#  Username string `mapstructure:"username" json:"username" yaml:"username"`
+#  Password string `mapstructure:"password" json:"password" yaml:"password"`
+#  Charset  string `mapstructure:"charset" json:"charset" yaml:"charset"` // utf8mb4
+#  //Collation string `mapstructure:"collation" json:"collation" yaml:"collation"`
+#  MaxIdleConns        int    `mapstructure:"max_idle_conns" json:"max_idle_conns" yaml:"max_idle_conns"`                         // 最大空闲连接数
+#  MaxOpenConns        int    `mapstructure:"max_open_conns" json:"max_open_conns" yaml:"max_open_conns"`                         // 最大连接数
+#  LogMode             bool   `mapstructure:"log_mode" json:"log_mode" yaml:"log_mode"`                                           // 是否开启日志模式
+#  EnableFileLogWriter bool   `mapstructure:"enable_file_log_writer" json:"enable_file_log_writer" yaml:"enable_file_log_writer"` // 是否开启文件日志模式
+#  LogFilename         string `mapstructure:"log_filename" json:"log_filename" yaml:"log_filename"`
+database:
+    driver:   mysql # 数据库驱动
+    host:     172.17.0.3
+
+    port:     3306
+    database: go_test
+    username: root
+    password: 123456
+    charset: utf8mb4
+    max_idle_conns: 10
+    max_open_conns: 100
+    log_mode: info
+    enable_file_log_writer: true
+    log_filename: sql.log
+
+jwt:
+    secret : skl3djfklasjdf4kljasoifja56sdklfj7alkskd # jwt密钥
+    jwt_ttl: 43200
