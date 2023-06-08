@@ -16,9 +16,9 @@ func main() {
 	var err error
 	global.App.DB, err = bootstrap.InitializeDB()
 	if err != nil {
-		global.App.Log.Info("数据库初始化失败")
+		global.App.Log.Info("mysql数据库初始化失败")
 	} else {
-		global.App.Log.Info("数据库初始化成功")
+		global.App.Log.Info("mysql数据库初始化成功")
 	}
 
 	defer func() {
@@ -28,5 +28,11 @@ func main() {
 		}
 	}()
 	bootstrap.InitializeValidator() //初始化验证器
+	global.App.Redis, err = bootstrap.InitializeRedis()
+	if err != nil {
+		global.App.Log.Info("Redis数据库初始化失败")
+	} else {
+		global.App.Log.Info("Redis数据库初始化成功")
+	}
 	bootstrap.RunServer()
 }

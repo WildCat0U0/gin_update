@@ -40,7 +40,6 @@ log:
 database:
     driver:   mysql # 数据库驱动
     host:     172.17.0.3
-
     port:     3306
     database: go_test
     username: root
@@ -55,3 +54,10 @@ database:
 jwt:
     secret : skl3djfklasjdf4kljasoifja56sdklfj7alkskd # jwt密钥
     jwt_ttl: 43200
+    jwt_blacklist_grace_period: 10
+
+redis:
+    host: "127.0.0.1"
+    port: "6379"
+    db: 0
+    password:
