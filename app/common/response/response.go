@@ -19,6 +19,9 @@ func Success(c *gin.Context, data interface{}) {
 		Data:      data,
 	})
 }
+func FailByError(c *gin.Context, error global.CustomError) {
+	Fail(c, error.ErrorCode, error.ErrorMsg)
+}
 
 // Fail ---失败响应
 func Fail(c *gin.Context, errorCode int, message string) {
@@ -42,4 +45,8 @@ func ValidateFail(c *gin.Context, msg string) {
 // BusinessFail ---失败响应
 func BusinessFail(c *gin.Context, msg string) {
 	Fail(c, global.Errors.BusinessError.ErrorCode, msg)
+}
+
+func TokenFail(c *gin.Context) {
+	FailByError(c, global.Errors.TokenError)
 }

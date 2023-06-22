@@ -1,0 +1,33 @@
+{"level":"local.info","ts":"[2023-06-22 17:34:57.041]","caller":"gin/main.go:13","msg":"日志初始化成功"}
+{"level":"local.error","ts":"[2023-06-22 17:35:18.107]","caller":"bootstrap/db.go:104","msg":"MySQL启动异常","err":"dial tcp 172.17.0.3:3306: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."}
+{"level":"local.info","ts":"[2023-06-22 17:35:18.107]","caller":"gin/main.go:19","msg":"mysql数据库初始化失败"}
+{"level":"local.info","ts":"[2023-06-22 17:35:18.108]","caller":"gin/main.go:35","msg":"Redis数据库初始化成功"}
+{"level":"local.info","ts":"[2023-06-22 17:35:43.412]","caller":"gin/main.go:13","msg":"日志初始化成功"}
+{"level":"local.error","ts":"[2023-06-22 17:35:43.421]","caller":"bootstrap/db.go:104","msg":"MySQL启动异常","err":"Error 1049 (42000): Unknown database 'go_test'"}
+{"level":"local.info","ts":"[2023-06-22 17:35:43.421]","caller":"gin/main.go:19","msg":"mysql数据库初始化失败"}
+{"level":"local.info","ts":"[2023-06-22 17:35:43.422]","caller":"gin/main.go:35","msg":"Redis数据库初始化成功"}
+{"level":"local.info","ts":"[2023-06-22 17:37:17.637]","caller":"gin/main.go:13","msg":"日志初始化成功"}
+{"level":"local.info","ts":"[2023-06-22 17:37:17.734]","caller":"gin/main.go:21","msg":"mysql数据库初始化成功"}
+{"level":"local.info","ts":"[2023-06-22 17:37:17.735]","caller":"gin/main.go:35","msg":"Redis数据库初始化成功"}
+{"level":"local.info","ts":"[2023-06-22 18:11:15.003]","caller":"gin/main.go:13","msg":"日志初始化成功"}
+{"level":"local.info","ts":"[2023-06-22 18:11:15.032]","caller":"gin/main.go:21","msg":"mysql数据库初始化成功"}
+{"level":"local.info","ts":"[2023-06-22 18:11:15.033]","caller":"gin/main.go:35","msg":"Redis数据库初始化成功"}
+{"level":"local.info","ts":"[2023-06-22 18:15:31.041]","caller":"routers/api.go:59","msg":"cookie获取错误，请联系管理员"}
+{"level":"local.info","ts":"[2023-06-22 18:16:29.653]","caller":"gin/main.go:13","msg":"日志初始化成功"}
+{"level":"local.info","ts":"[2023-06-22 18:16:29.682]","caller":"gin/main.go:21","msg":"mysql数据库初始化成功"}
+{"level":"local.info","ts":"[2023-06-22 18:16:29.683]","caller":"gin/main.go:35","msg":"Redis数据库初始化成功"}
+{"level":"local.info","ts":"[2023-06-22 18:17:22.124]","caller":"gin/main.go:13","msg":"日志初始化成功"}
+{"level":"local.info","ts":"[2023-06-22 18:17:22.151]","caller":"gin/main.go:21","msg":"mysql数据库初始化成功"}
+{"level":"local.info","ts":"[2023-06-22 18:17:22.152]","caller":"gin/main.go:35","msg":"Redis数据库初始化成功"}
+{"level":"local.info","ts":"[2023-06-22 18:17:57.391]","caller":"gin/main.go:13","msg":"日志初始化成功"}
+{"level":"local.info","ts":"[2023-06-22 18:17:57.419]","caller":"gin/main.go:21","msg":"mysql数据库初始化成功"}
+{"level":"local.info","ts":"[2023-06-22 18:17:57.420]","caller":"gin/main.go:35","msg":"Redis数据库初始化成功"}
+{"level":"local.info","ts":"[2023-06-22 18:18:34.493]","caller":"gin/main.go:13","msg":"日志初始化成功"}
+{"level":"local.info","ts":"[2023-06-22 18:18:34.523]","caller":"gin/main.go:21","msg":"mysql数据库初始化成功"}
+{"level":"local.info","ts":"[2023-06-22 18:18:34.525]","caller":"gin/main.go:35","msg":"Redis数据库初始化成功"}
+{"level":"local.info","ts":"[2023-06-22 20:27:30.465]","caller":"gin/main.go:13","msg":"日志初始化成功"}
+{"level":"local.info","ts":"[2023-06-22 20:27:30.492]","caller":"gin/main.go:21","msg":"mysql数据库初始化成功"}
+{"level":"local.info","ts":"[2023-06-22 20:27:30.493]","caller":"gin/main.go:35","msg":"Redis数据库初始化成功"}
+{"level":"local.info","ts":"[2023-06-22 20:33:42.127]","caller":"gin/main.go:13","msg":"日志初始化成功"}
+{"level":"local.info","ts":"[2023-06-22 20:33:42.151]","caller":"gin/main.go:21","msg":"mysql数据库初始化成功"}
+{"level":"local.info","ts":"[2023-06-22 20:33:42.153]","caller":"gin/main.go:35","msg":"Redis数据库初始化成功"}

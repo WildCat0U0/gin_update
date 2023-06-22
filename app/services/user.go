@@ -6,6 +6,7 @@ import (
 	"Gin_Start/global"
 	"Gin_Start/utils"
 	"errors"
+	"strconv"
 )
 
 type userService struct {
@@ -38,7 +39,7 @@ func (userService *userService) Register(params request.Register) (err error, us
 		err = errors.New("手机号已存在")
 		return
 	}
-	user = models.User{Name: params.Name, Mobile: params.Mobile, Password: utils.BcryptMake([]byte(params.Password))}
+	user = models.User{Name: params.Name, Mobile: params.Mobile, Password: utils.BcryptMake([]byte(params.Password)), Email: params.Email}
 	err = global.App.DB.Create(&user).Error //在这里创建了一个
 	return
 }
@@ -82,4 +83,13 @@ func (userService *userService) UpdatePassword(params request.ChangePassword) er
 		return errors.New("修改密码失败，请联系管理员")
 	}
 	return nil
+}
+
+func (userService *userService) GetUserInfo(id string) (err error, user models.User) {
+	intId, _ := strconv.Atoi(id)
+	err = global.App.DB.First(&user, intId).Error
+	if err != nil {
+		global.App.Log.Info("用户数据不存在")
+	}
+	return
 }
