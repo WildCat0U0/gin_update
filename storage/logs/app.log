@@ -31,3 +31,26 @@
 {"level":"local.info","ts":"[2023-06-22 20:33:42.127]","caller":"gin/main.go:13","msg":"日志初始化成功"}
 {"level":"local.info","ts":"[2023-06-22 20:33:42.151]","caller":"gin/main.go:21","msg":"mysql数据库初始化成功"}
 {"level":"local.info","ts":"[2023-06-22 20:33:42.153]","caller":"gin/main.go:35","msg":"Redis数据库初始化成功"}
+{"level":"local.info","ts":"[2023-06-22 20:46:41.137]","caller":"gin/main.go:13","msg":"日志初始化成功"}
+{"level":"local.info","ts":"[2023-06-22 20:46:41.167]","caller":"gin/main.go:21","msg":"mysql数据库初始化成功"}
+{"level":"local.info","ts":"[2023-06-22 20:46:41.168]","caller":"gin/main.go:35","msg":"Redis数据库初始化成功"}
+{"level":"local.info","ts":"[2023-06-23 00:12:36.095]","caller":"gin/main.go:13","msg":"日志初始化成功"}
+{"level":"local.error","ts":"[2023-06-23 00:12:38.151]","caller":"bootstrap/db.go:104","msg":"MySQL启动异常","err":"dial tcp 127.0.0.1:3306: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"local.info","ts":"[2023-06-23 00:12:38.151]","caller":"gin/main.go:19","msg":"mysql数据库初始化失败"}
+{"level":"local.error","ts":"[2023-06-23 00:12:46.423]","caller":"bootstrap/redis.go:19","msg":"Redis connect ping failed,err :","err":"dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"local.info","ts":"[2023-06-23 00:12:46.423]","caller":"gin/main.go:33","msg":"Redis数据库初始化失败"}
+{"level":"local.info","ts":"[2023-06-23 00:14:03.079]","caller":"gin/main.go:13","msg":"日志初始化成功"}
+{"level":"local.info","ts":"[2023-06-23 00:14:03.116]","caller":"gin/main.go:21","msg":"mysql数据库初始化成功"}
+{"level":"local.info","ts":"[2023-06-23 00:14:03.117]","caller":"gin/main.go:35","msg":"Redis数据库初始化成功"}
+{"level":"local.info","ts":"[2023-06-23 00:47:23.147]","caller":"gin/main.go:13","msg":"日志初始化成功"}
+{"level":"local.info","ts":"[2023-06-23 00:47:23.172]","caller":"gin/main.go:21","msg":"mysql数据库初始化成功"}
+{"level":"local.info","ts":"[2023-06-23 00:47:23.173]","caller":"gin/main.go:35","msg":"Redis数据库初始化成功"}
+{"level":"local.info","ts":"[2023-06-23 01:03:10.904]","caller":"gin/main.go:13","msg":"日志初始化成功"}
+{"level":"local.info","ts":"[2023-06-23 01:03:10.928]","caller":"gin/main.go:21","msg":"mysql数据库初始化成功"}
+{"level":"local.info","ts":"[2023-06-23 01:03:10.929]","caller":"gin/main.go:35","msg":"Redis数据库初始化成功"}
+{"level":"local.info","ts":"[2023-06-23 01:04:36.040]","caller":"gin/main.go:13","msg":"日志初始化成功"}
+{"level":"local.info","ts":"[2023-06-23 01:04:36.066]","caller":"gin/main.go:21","msg":"mysql数据库初始化成功"}
+{"level":"local.info","ts":"[2023-06-23 01:04:36.067]","caller":"gin/main.go:35","msg":"Redis数据库初始化成功"}
+{"level":"local.info","ts":"[2023-06-23 01:09:53.884]","caller":"gin/main.go:13","msg":"日志初始化成功"}
+{"level":"local.info","ts":"[2023-06-23 01:09:53.908]","caller":"gin/main.go:21","msg":"mysql数据库初始化成功"}
+{"level":"local.info","ts":"[2023-06-23 01:09:53.909]","caller":"gin/main.go:35","msg":"Redis数据库初始化成功"}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <title>Wildcat-Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.0/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.0/dist/sweetalert2.all.min.js"></script>
+  <style>
+    /* 样式表 */
+    /* 设置背景色和动画效果 */
+    body {
+      background-color: #F5F5F5;
+      animation-name: colorchange;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+
+    /* 定义动画效果 */
+    @keyframes colorchange {
+      0%   {background-color: #F5F5F5;}
+      25%  {background-color: #C8E6C9;}
+      50%  {background-color: #B2DFDB;}
+      75%  {background-color: #80CBC4;}
+      100% {background-color: #4DB6AC;}
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    form{
+      background-image: url("1.jpg");
+    }
+    /* 定义提交按钮样式 */
+    button[type=button] {
+      background-color: #4CAF50;
+      width : 100%;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .input-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      width: 500px;
+      margin: 0 auto;
+    }
+
+    .input-group label {
+      width: 100px;
+      text-align: right;
+      font-family: "Source Code Pro Black","微软雅黑",sans-serif;
+      font-size: large;
+      color: chocolate;
+    }
+
+    .input-group input {
+      width: 300px;
+    }
+
+    input[type=text], input[type=password] {
+      display: inline-block;
+      width: 100%;
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+    .button-container {
+      display: flex;
+    }
+
+    .login-button {
+      flex: 7;
+      /* 其他样式 */
+    }
+    .button-gap{
+      flex:.02;
+    }
+    .register-button {
+      flex: 3;
+      /* 其他样式 */
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1 style="font-family: 'Times New Roman',微軟正黑體,serif;">
+    <img src="favicon.ico" alt="what is this">
+    欢迎 Welcome
+    <img src="favicon.ico" alt="what is this">
+  </h1>
+  <a href="https://github.com/WildCat0U0">
+    <h2>
+      <img src="123.svg" alt="what is this">
+    </h2>
+  </a>
+
+  <p></p>
+  <form>
+    <div class="input-group">
+      <label for="username">手机  |</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="input-group">
+      <label for="password">密码  |</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <div class="button-container">
+      <button class="login-button" type="button" onclick="login_new()">登录</button><div class="button-gap"></div>
+      <a href = "../register/register.html">
+        <button class="register-button" type="button">注册</button>
+      </a>
+    </div>
+  </form>
+</div>
+
+<script>
+  function login() {
+    // 获取输入框中的用户名和密码
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+    // 将用户名和密码转换成JSON格式
+    var data = JSON.stringify({
+      name: username,
+      password: password
+    });
+    // 使用XMLHttpRequest对象发送POST请求
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "http://localhost:8888/api/auth/login");
+    xhr.setRequestHeader("Content-type", "application/json");
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        // 登录成功，跳转到其他页面
+        // window.location.href = "http://www.example.com";
+        var json = resp
+
+      } else if (xhr.readyState === 4 && xhr.status !== 200) {
+        // 登录失败，显示错误信息
+        alert("登录失败，请检查用户名和密码是否正确。");
+      }
+    };
+    xhr.send(data);
+  }
+
+  function login_new() {
+      let mobile = document.getElementById("username").value;
+      let password = document.getElementById("password").value;
+      fetch("http://localhost:8888/api/auth/login", {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+              mobile: mobile,
+              password: password
+          })
+      })
+          .then(response => response.json())
+          .then(data => {
+              // 处理 JSON 数据
+              const errorCode = data.error_code
+              const msg = data.message
+              if (errorCode !== 0) {
+                  // window.alert(`${msg}`)
+                  Swal.fire({
+                      title: "Tips",
+                      text: `${msg}`,
+                      icon: "error",
+                      confirmButtonText: "确定"
+                  })
+                  console.error(`Error code: ${errorCode}`);
+
+              } else {
+                  Swal.fire({
+                      title: '提示',
+                      text: '3 秒后将跳转到另一个页面',
+                      icon: 'success',
+                      timer: 3000,
+                      timerProgressBar: true,
+                      showConfirmButton: false
+                  })
+                  // 延迟 3 秒后跳转到另一个页面
+                  setTimeout(() => {
+                      window.location.href = 'https://www.example.com';
+                  }, 3000);
+              }
+
+          })
+          .catch(error => {
+              // 处理错误
+              console.error(error);
+          });
+  }
+</script>
+</body>
+</html>

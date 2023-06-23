@@ -22,6 +22,7 @@ func Login(c *gin.Context) {
 			response.BusinessFail(c, err.Error())
 			return
 		}
+		//c.SetCookie()
 		response.Success(c, tokenData)
 	}
 }
