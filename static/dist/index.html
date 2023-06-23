@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Logout Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.0/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.0/dist/sweetalert2.all.min.js"></script>
+</head>
+<body>
+<h1>Welcome to the Logout Page</h1>
+<p>Click the button below to log out:</p>
+
+<button onclick="logout()">Logout</button>
+
+<script>
+    // 清除当前页面中保存的 Cookie
+    function logout() {
+        fetch("http://localhost:8888/api/auth/logout",{
+            method:"POST",
+            headers:{
+                'Content-Type' : 'application/json'
+            },
+        })
+            .then(response => response.json())
+            .then(data => {
+                // 处理 JSON 数据
+                const errorCode = data.error_code
+                const msg = data.message
+                if (errorCode !== 0) {
+                    // window.alert(`${msg}`)
+                    Swal.fire({
+                        title: "Tips",
+                        text: `${msg}`,
+                        icon: "error",
+                        confirmButtonText: "确定"
+                    })
+                    console.error(`Error code: ${errorCode}`);
+                } else {
+                    Swal.fire({
+                        title: '提示',
+                        text: '登出成功，3 秒后将跳转到另一个页面',
+                        icon: 'success',
+                        timer: 3000,
+                        timerProgressBar: true,
+                        showConfirmButton: false
+                    })
+                    document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                    setTimeout(() => {
+                        window.location.href = 'login.html';
+                    }, 3000);
+                }
+
+            })
+            .catch(error => {
+                // 处理错误
+                console.error(error);
+            });
+    }
+</script>
+</body>
+</html>

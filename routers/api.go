@@ -50,7 +50,6 @@ func SetApiGroupRouters(router *gin.RouterGroup) {
 	//		"message": "success",
 	//	})
 	//})
-
 	router.POST("/auth/register", app.Register)
 	router.POST("/auth/login", app.Login)
 	router.POST("/auth/updatePassword", app.ChangePasswordHandler)
@@ -79,6 +78,7 @@ func SetApiGroupRouters(router *gin.RouterGroup) {
 	{
 		authRouter.POST("/auth/info", app.Info)
 		authRouter.POST("/auth/logout", app.Logout)
+		authRouter.POST("/auth/is_login", app.IsLogin)
 	}
 
 }

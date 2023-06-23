@@ -688,3 +688,792 @@
 
 2023/06/23 01:11:00 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
 [1.396ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 11:16:08 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.534ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 11:16:08 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[2.624ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 11:16:08 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.761ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'go_test' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/06/23 11:16:08 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.510ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 11:16:08 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.052ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 11:16:08 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[4.026ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/06/23 11:16:08 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.560ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'go_test' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/06/23 11:16:08 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.520ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 11:16:08 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.483ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 11:16:08 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.697ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/06/23 11:16:08 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.750ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 11:16:08 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.028ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 11:16:08 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.081ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_email'
+
+2023/06/23 11:16:08 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.531ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 11:16:08 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.044ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 11:16:08 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.696ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/06/23 11:16:22 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[1.442ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 11:16:24 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[1.954ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 11:16:24 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[1.626ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 11:16:24 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[2.443ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 11:16:25 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[3.233ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 11:16:25 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[1.245ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 11:16:25 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[1.492ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 11:16:25 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[1.329ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 11:16:25 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[1.847ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 11:16:25 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[2.389ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 11:17:21 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[1.957ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 11:17:32 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[2.394ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 11:18:35 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[1.401ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 11:21:09 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[2.203ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 11:23:31 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[2.450ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 11:24:01 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[1.884ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 11:24:03 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[2.054ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 11:28:15 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[2.256ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 11:28:26 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[2.848ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 11:28:32 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[2.911ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 11:28:36 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[1.970ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 11:31:31 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[2.289ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 11:41:53 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:37
+[1.872ms] [rows:1] SELECT `id` FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 11:42:00 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:37
+[1.980ms] [rows:1] SELECT `id` FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 11:43:26 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:37
+[2.093ms] [rows:1] SELECT `id` FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 11:43:36 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:37 record not found
+[2.709ms] [rows:0] SELECT `id` FROM `users` WHERE mobile = '18612331500' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 11:43:36 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:43
+[10.898ms] [rows:1] INSERT INTO `users` (`name`,`password`,`mobile`,`email`,`created_at`,`updated_at`,`deleted_at`) VALUES ('wildcat','$2a$04$X2CcEb.0htsZ6fjI50SlyuiGpsJLyj7zN6eijZTPUwGCXBPnUdZsC','18612331500','244133871@qq.com','2023-06-23 11:43:36.218','2023-06-23 11:43:36.218',NULL)
+
+2023/06/23 13:55:10 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.039ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 13:55:10 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[2.902ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 13:55:10 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[3.098ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'go_test' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/06/23 13:55:10 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.585ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 13:55:10 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[2.395ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 13:55:10 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.015ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/06/23 13:55:10 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[2.690ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'go_test' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/06/23 13:55:10 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.529ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 13:55:10 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[2.688ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 13:55:10 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[2.830ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/06/23 13:55:10 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.033ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 13:55:10 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.547ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 13:55:10 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[2.633ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/06/23 13:55:10 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.503ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 13:55:10 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[2.958ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 13:55:10 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[2.362ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_email'
+
+2023/06/23 13:55:56 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[1.406ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 13:56:58 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[1.017ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 13:57:27 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[1.174ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 13:57:33 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[1.317ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 13:57:46 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[1.878ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 13:58:03 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[1.122ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 14:03:58 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:03:58 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.050ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:03:58 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.042ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'go_test' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/06/23 14:03:58 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.511ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:03:58 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.050ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:03:58 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.518ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/06/23 14:03:58 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.042ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'go_test' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/06/23 14:03:58 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.520ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:03:58 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.041ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:03:58 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.042ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/06/23 14:03:58 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.517ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:03:58 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.028ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:03:58 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.049ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_email'
+
+2023/06/23 14:03:58 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.522ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:03:58 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.057ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:03:58 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.612ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/06/23 14:04:00 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[1.344ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 14:07:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:07:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.047ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:07:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.047ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'go_test' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/06/23 14:07:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.524ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:07:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.048ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:07:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.524ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/06/23 14:07:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.039ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'go_test' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/06/23 14:07:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.522ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:07:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.049ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:07:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.618ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_email'
+
+2023/06/23 14:07:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.558ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:07:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.537ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:07:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.036ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/06/23 14:07:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.518ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:07:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.037ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:07:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.042ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/06/23 14:09:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.514ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:09:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.544ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:09:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.026ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'go_test' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/06/23 14:09:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.513ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:09:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.020ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:09:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.631ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/06/23 14:09:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.547ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'go_test' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/06/23 14:09:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.512ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:09:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.367ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:09:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.020ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/06/23 14:09:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.514ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:09:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.025ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:09:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.026ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_email'
+
+2023/06/23 14:09:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.513ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:09:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.513ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:09:57 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.031ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/06/23 14:11:05 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.625ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:11:05 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.042ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:11:05 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.573ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'go_test' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/06/23 14:11:05 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.517ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:11:05 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.049ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:11:05 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.537ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/06/23 14:11:05 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.059ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'go_test' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/06/23 14:11:05 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.518ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:11:05 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.035ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:11:05 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.048ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/06/23 14:11:05 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.517ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:11:05 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.571ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:11:05 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.022ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_email'
+
+2023/06/23 14:11:05 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.544ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:11:05 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.043ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:11:05 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.624ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/06/23 14:11:13 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.526ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:11:13 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.037ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:11:13 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.034ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'go_test' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/06/23 14:11:13 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:11:13 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.035ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:11:13 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.000ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/06/23 14:11:13 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.033ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'go_test' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/06/23 14:11:13 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.540ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:11:13 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.527ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:11:13 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.072ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/06/23 14:11:13 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.519ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:11:13 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.028ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:11:13 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.540ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_email'
+
+2023/06/23 14:11:13 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.584ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:11:13 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.029ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:11:13 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.533ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/06/23 14:12:14 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[2.315ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 14:14:09 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:14:09 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.034ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:14:09 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.037ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'go_test' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/06/23 14:14:09 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.518ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:14:09 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.576ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:14:09 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.504ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/06/23 14:14:09 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.035ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'go_test' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/06/23 14:14:09 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.517ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:14:09 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.517ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:14:09 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.080ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/06/23 14:14:09 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.520ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:14:09 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.030ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:14:09 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.053ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_email'
+
+2023/06/23 14:14:09 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:14:09 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.114ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:14:09 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.659ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/06/23 14:14:11 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[1.603ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 14:15:51 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.632ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:15:51 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.260ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:15:51 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.518ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'go_test' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/06/23 14:15:51 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:15:51 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.032ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:15:51 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.000ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/06/23 14:15:51 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.558ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'go_test' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/06/23 14:15:51 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.506ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:15:51 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.515ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:15:51 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.070ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/06/23 14:15:51 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.518ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:15:51 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.518ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:15:51 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.048ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_email'
+
+2023/06/23 14:15:51 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.152ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:15:51 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.021ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:15:51 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.518ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/06/23 14:16:06 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[1.482ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 14:17:27 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:17:27 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.034ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:17:27 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.036ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'go_test' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/06/23 14:17:27 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.519ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:17:27 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.040ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:17:27 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.745ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/06/23 14:17:27 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.549ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'go_test' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/06/23 14:17:27 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.524ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:17:27 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.023ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:17:27 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.562ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/06/23 14:17:27 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.523ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:17:27 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.518ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:17:27 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.038ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/06/23 14:17:27 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:17:27 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.027ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:17:27 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.035ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_email'
+
+2023/06/23 14:17:34 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[1.257ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 14:29:06 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[1.715ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 14:30:55 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.593ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:30:55 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.028ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:30:55 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.631ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'go_test' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/06/23 14:30:55 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.520ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:30:55 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.060ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:30:55 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.545ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/06/23 14:30:55 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.046ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'go_test' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/06/23 14:30:55 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:30:55 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.084ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:30:55 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.051ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/06/23 14:30:55 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:30:55 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.037ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:30:55 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.035ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_email'
+
+2023/06/23 14:30:55 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.927ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:30:55 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.028ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:30:55 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.046ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/06/23 14:32:12 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[2.078ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 14:32:36 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[2.512ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 14:32:51 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[2.498ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 14:33:11 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[1.890ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 14:34:41 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[2.423ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 14:35:12 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[1.708ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 14:37:25 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48 record not found
+[1.609ms] [rows:0] SELECT * FROM `users` WHERE mobile = '17783073959' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 14:37:29 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[2.217ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 14:37:57 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[2.214ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 14:47:21 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[1.474ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 14:48:13 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[2.278ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 14:52:39 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:48
+[1.534ms] [rows:1] SELECT * FROM `users` WHERE mobile = '17783073950' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 14:52:43 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:90
+[1.308ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 3 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 14:52:47 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:90
+[1.049ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 3 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 14:52:48 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:90
+[3.592ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 3 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 14:52:48 E:/Study/Wildcat1u1/gin/gin/app/services/user.go:90
+[1.082ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 3 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/06/23 14:54:11 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.516ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:54:11 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.039ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:54:11 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.040ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'go_test' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/06/23 14:54:11 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:54:11 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.038ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:54:11 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.519ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/06/23 14:54:11 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.563ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'go_test' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/06/23 14:54:11 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.517ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:54:11 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.518ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:54:11 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.555ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/06/23 14:54:11 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.519ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:54:11 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.519ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:54:11 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.038ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_email'
+
+2023/06/23 14:54:11 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.518ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:54:11 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.039ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:54:11 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.560ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/06/23 14:58:21 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:58:21 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.030ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:58:21 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.476ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'go_test' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/06/23 14:58:21 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.516ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:58:21 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.036ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:58:21 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.512ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/06/23 14:58:21 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.030ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'go_test' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/06/23 14:58:21 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.516ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:58:21 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.028ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:58:21 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.030ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/06/23 14:58:21 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.515ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:58:21 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.514ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:58:21 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.516ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_email'
+
+2023/06/23 14:58:21 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[0.511ms] [rows:-] SELECT DATABASE()
+
+2023/06/23 14:58:21 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.029ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'go_test%' ORDER BY SCHEMA_NAME='go_test' DESC,SCHEMA_NAME limit 1
+
+2023/06/23 14:58:21 E:/Study/Wildcat1u1/gin/gin/bootstrap/db.go:122
+[1.033ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'go_test' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'

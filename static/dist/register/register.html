@@ -9,6 +9,12 @@
     <style>
         /* 样式表 */
         /* 设置背景色和动画效果 */
+        h1{
+            font-family: "Times New Roman",sans-serif;
+            font-size: xxx-large;
+            font-style: oblique;
+        }
+
         body {
             background-color: #F5F5F5;
             animation-name: colorchange;
@@ -33,7 +39,7 @@
             height: 100vh;
         }
         form{
-            background-image: url("../dist/1.jpg");
+            background-image: url("../1.jpg");
         }
         /* 定义提交按钮样式 */
         button[type=button] {
@@ -93,13 +99,13 @@
 <body>
 <div class="container">
     <h1 style="font-family: 'Times New Roman',微軟正黑體,serif;">
-        <img src="../dist/favicon.ico" alt="what is this">
+        <img src="../favicon.ico" alt="what is this">
         欢迎 Welcome
-        <img src="../dist/favicon.ico" alt="what is this">
+        <img src="../favicon.ico" alt="what is this">
     </h1>
     <a href="https://github.com/WildCat0U0">
         <h2>
-            <img src="../dist/123.svg" alt="what is this">
+            <img src="../123.svg" alt="what is this">
         </h2>
     </a>
 <form>
@@ -123,7 +129,7 @@
     <div class="button-container">
         <button class="login-button" type="button" onclick="register_new()">注册</button>
         <div class="button-gap"></div>
-        <a href = "../dist/index.html">
+        <a href = "../login.html">
             <button class="register-button" type="button">已有账号？立即登录</button>
         </a>
     </div>
@@ -193,7 +199,7 @@
                     })
                     // 延迟 3 秒后跳转到另一个页面
                     setTimeout(() => {
-                        window.location.href = '../dist/index.html';
+                        window.location.href = '../index.html';
                     }, 3000);
                 }
             })

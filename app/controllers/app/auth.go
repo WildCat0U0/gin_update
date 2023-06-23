@@ -6,6 +6,8 @@ import (
 	"Gin_Start/app/services"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
+	"net/http"
+	"time"
 )
 
 func Login(c *gin.Context) {
@@ -22,7 +24,8 @@ func Login(c *gin.Context) {
 			response.BusinessFail(c, err.Error())
 			return
 		}
-		//c.SetCookie()
+		cookie1 := &http.Cookie{Name: "tokenoflogin", Value: tokenData.AccessToken, Expires: time.Time{}.Add(3600 * time.Second), HttpOnly: true}
+		c.SetCookie(cookie1.Name, cookie1.Value, cookie1.MaxAge, cookie1.Path, cookie1.Domain, cookie1.Secure, cookie1.HttpOnly)
 		response.Success(c, tokenData)
 	}
 }
@@ -42,5 +45,11 @@ func Logout(c *gin.Context) {
 		return
 	}
 	//response.Success(c, "成功退出")
+	cookie1 := &http.Cookie{Name: "tokenoflogin", Value: "", Expires: time.Time{}.Add(3600 * time.Second), HttpOnly: true}
+	c.SetCookie(cookie1.Name, cookie1.Value, cookie1.MaxAge, cookie1.Path, cookie1.Domain, cookie1.Secure, cookie1.HttpOnly)
 	c.Redirect(301, "/")
+}
+
+func IsLogin(c *gin.Context) {
+
 }

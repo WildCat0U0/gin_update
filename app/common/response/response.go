@@ -50,3 +50,7 @@ func BusinessFail(c *gin.Context, msg string) {
 func TokenFail(c *gin.Context) {
 	FailByError(c, global.Errors.TokenError)
 }
+
+func TokenEmpty(c *gin.Context) {
+	FailByError(c, global.Errors.TokenEmptyError)
+}
