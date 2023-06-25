@@ -11,7 +11,7 @@ import (
 func JWTAuth(GuardName string) gin.HandlerFunc {
 	return func(c *gin.Context) {
 		//tokenStr := c.Request.Header.Get("Authorization")
-		tokenStr, _ := c.Cookie("tokenoflogin")
+		tokenStr, _ := c.Cookie("username")
 		if tokenStr == "" {
 			response.TokenEmpty(c)
 			c.Abort()

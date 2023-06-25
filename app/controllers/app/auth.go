@@ -24,8 +24,8 @@ func Login(c *gin.Context) {
 			response.BusinessFail(c, err.Error())
 			return
 		}
-		cookie1 := &http.Cookie{Name: "tokenoflogin", Value: tokenData.AccessToken, Expires: time.Time{}.Add(3600 * time.Second), HttpOnly: true}
-		c.SetCookie(cookie1.Name, cookie1.Value, cookie1.MaxAge, cookie1.Path, cookie1.Domain, cookie1.Secure, cookie1.HttpOnly)
+		cookie1 := &http.Cookie{Name: "username", Value: tokenData.AccessToken, Expires: time.Now().Add(time.Hour), HttpOnly: false}
+		c.SetCookie(cookie1.Name, cookie1.Value, cookie1.MaxAge, cookie1.Path, cookie1.Domain, false, cookie1.HttpOnly)
 		response.Success(c, tokenData)
 	}
 }
@@ -45,9 +45,11 @@ func Logout(c *gin.Context) {
 		return
 	}
 	//response.Success(c, "成功退出")
-	cookie1 := &http.Cookie{Name: "tokenoflogin", Value: "", Expires: time.Time{}.Add(3600 * time.Second), HttpOnly: true}
-	c.SetCookie(cookie1.Name, cookie1.Value, cookie1.MaxAge, cookie1.Path, cookie1.Domain, cookie1.Secure, cookie1.HttpOnly)
-	c.Redirect(301, "/")
+	c.SetSameSite(http.SameSiteLaxMode)
+	//cookie1 := &http.Cookie{Name: "username", Value: "", Expires: time.Time{}.Add(3600 * time.Second), HttpOnly: false}
+	//c.SetCookie(cookie1.Name, cookie1.Value, cookie1.MaxAge, cookie1.Path, cookie1.Domain, cookie1.Secure, cookie1.HttpOnly)
+	//c.Redirect(301, "/")
+	response.Success(c, "成功退出")
 }
 
 func IsLogin(c *gin.Context) {

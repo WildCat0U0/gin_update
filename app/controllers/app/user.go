@@ -5,6 +5,8 @@ import (
 	"Gin_Start/app/common/response"
 	"Gin_Start/app/services"
 	"github.com/gin-gonic/gin"
+	"net/http"
+	"time"
 )
 
 // Register :注册结构体 校验入参，调用 UserService 注册逻辑，返回结果
@@ -35,6 +37,13 @@ func Register(c *gin.Context) {
 	if err, user := services.UserService.Register(form); err != nil {
 		response.BusinessFail(c, err.Error())
 	} else {
+		tokenData, err, _ := services.JwtService.CreateToken(services.AppGuardName, user)
+		if err != nil {
+			response.BusinessFail(c, err.Error())
+			return
+		}
+		cookie1 := &http.Cookie{Name: "username", Value: tokenData.AccessToken, Expires: time.Now().Add(time.Hour), HttpOnly: false}
+		c.SetCookie(cookie1.Name, cookie1.Value, cookie1.MaxAge, cookie1.Path, cookie1.Domain, false, cookie1.HttpOnly)
 		response.Success(c, user)
 	}
 }

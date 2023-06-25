@@ -2,7 +2,6 @@ package services
 
 import (
 	"Gin_Start/global"
-	"Gin_Start/utils"
 	"context"
 	"github.com/dgrijalva/jwt-go"
 	"strconv"
@@ -34,6 +33,8 @@ type TokenOutPut struct {
 	ExpiresIn   int    `json:"expires_in"`   // 过期时间
 }
 
+//随机密钥生成
+
 // CreateToken 创建token
 func (jwtService *jwtService) CreateToken(GuardName string, user JwtUser) (tokenData TokenOutPut, err error, token *jwt.Token) {
 	token = jwt.NewWithClaims(jwt.SigningMethodHS256, CustomClaims{
@@ -57,7 +58,8 @@ func (jwtService *jwtService) CreateToken(GuardName string, user JwtUser) (token
 
 // 获取黑名单缓存 key
 func (jwtService *jwtService) getBlackListKey(tokenStr string) string {
-	return "jwt_black_list:" + utils.MD5([]byte(tokenStr))
+	//return "jwt_black_list:" + utils.MD5([]byte(tokenStr))
+	return "jwt_black_list:" + tokenStr
 }
 
 // JoinBlackList token 加入黑名单
@@ -77,7 +79,7 @@ func (jwtService *jwtService) IsInBlacklist(tokenStr string) bool {
 		return false
 	}
 	// JwtBlacklistGracePeriod 为黑名单宽限时间，避免并发请求失效
-	if time.Now().Unix()-joinUnix < global.App.Config.Jwt.JwtBlacklistGracePeriod {
+	if time.Now().Unix()-joinUnix < global.App.Config.Jwt.JwtBlacklistGracePeriod { //
 		return false
 	}
 	return true

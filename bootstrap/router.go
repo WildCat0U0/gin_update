@@ -18,7 +18,10 @@ import (
 func setupRouter() *gin.Engine {
 	r := gin.Default() // 创建默认路由
 	con := cors.DefaultConfig()
-	con.AllowAllOrigins = true
+	con.AllowOrigins = []string{"http://localhost:63342"}
+	con.AllowCredentials = true
+	con.AllowMethods = []string{"GET", "POST", "OPTIONS"}
+	con.AllowHeaders = []string{"Content-Type", "Authorization"}
 	r.Use(cors.New(con))
 	//前端项目静态文件
 	//Static函数的作用是 将指定的文件夹下的文件暴露出来，供外部访问

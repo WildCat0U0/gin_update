@@ -152,14 +152,25 @@
     xhr.send(data);
   }
 
+  function login_1()
+  {
+    fetch("http://localhost:8888/api/cookie/test",{
+      method : "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+  })
+  }
   function login_new() {
-      let mobile = document.getElementById("username").value;
-      let password = document.getElementById("password").value;
+      var mobile = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
       fetch("http://localhost:8888/api/auth/login", {
           method: 'POST',
           headers: {
-              'Content-Type': 'application/json'
+              'Content-Type': 'application/json',
           },
+          credentials : "include",
           body: JSON.stringify({
               mobile: mobile,
               password: password
@@ -170,6 +181,7 @@
               // 处理 JSON 数据
               const errorCode = data.error_code
               const msg = data.message
+              const token = data.data.access_token
               if (errorCode !== 0) {
                   // window.alert(`${msg}`)
                   Swal.fire({
@@ -181,13 +193,17 @@
                   console.error(`Error code: ${errorCode}`);
 
               } else {
+                  // var token = response.headers.get("Set-Cookie").split(";")[0].split('=')[1];
+                  // document.cookie = 'tokenoflogin=' + token + '; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/; secure; samesite=strict';
+                 // document.cookie ='username='+token +'; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/; secure; samesite=strict'
                   Swal.fire({
                       title: '提示',
                       text: '3 秒后将跳转到另一个页面',
                       icon: 'success',
                       timer: 3000,
                       timerProgressBar: true,
-                      showConfirmButton: false
+                      showConfirmButton: false,
+                      cookie : data
                   })
                   // 延迟 3 秒后跳转到另一个页面
                   setTimeout(() => {
@@ -196,6 +212,7 @@
               }
 
           })
+
           .catch(error => {
               // 处理错误
               console.error(error);
