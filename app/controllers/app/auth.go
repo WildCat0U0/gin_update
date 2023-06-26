@@ -24,7 +24,7 @@ func Login(c *gin.Context) {
 			response.BusinessFail(c, err.Error())
 			return
 		}
-		cookie1 := &http.Cookie{Name: "username", Value: tokenData.AccessToken, Expires: time.Now().Add(time.Hour), HttpOnly: false}
+		cookie1 := &http.Cookie{Name: "username", Value: tokenData.AccessToken, Expires: time.Unix(0, 0).Add(time.Duration(tokenData.ExpiresIn) * time.Second), HttpOnly: false}
 		c.SetCookie(cookie1.Name, cookie1.Value, cookie1.MaxAge, cookie1.Path, cookie1.Domain, false, cookie1.HttpOnly)
 		response.Success(c, tokenData)
 	}

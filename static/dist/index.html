@@ -71,7 +71,7 @@
     //         });
     // }
     function logout() {
-        fetch("http://localhost:8888/api/auth/logout",{
+        fetch("http://localhost:8888/api/auth/info",{
             method:"POST",
             credentials : "include",
         })
@@ -94,7 +94,7 @@
                         title: '提示',
                         text: '登出成功，3 秒后将跳转到另一个页面',
                         icon: 'success',
-                        timer: 3000,
+                        timer: 3,
                         timerProgressBar: true,
                         showConfirmButton: false
                     })
@@ -109,21 +109,24 @@
                     // }else {
                     //     return;
                     // }
-                    const cookies = document.cookie.split(";");
 
-                    // 遍历每个键值对，查找名为 "username" 的 Cookie，并将其删除
-                    for (let i = 0; i < cookies.length; i++) {
-                        const cookie = cookies[i].trim();
-                        if (cookie.startsWith("username=")) {
-                            // 将名为 "username" 的 Cookie 删除
-                            document.cookie = `${cookie}; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
-                        }
+
+                        // const cookies = document.cookie.split(";");
+                        //
+                        // // 遍历每个键值对，查找名为 "username" 的 Cookie，并将其删除
+                        // for (let i = 0; i < cookies.length; i++) {
+                        //     const cookie = cookies[i].trim();
+                        //     if (cookie.startsWith("username=")) {
+                        //         // 将名为 "username" 的 Cookie 删除
+                        //         document.cookie = `${cookie}; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+                        //     }
+                        // }
+                        // setTimeout(() => {
+                        //     window.location.href = 'login.html';
+                        // }, 3000);
                     }
-                    setTimeout(() => {
-                        window.location.href = 'login.html';
-                    }, 3000);
-                }
-            })
+                    })
+
             .catch(error => {
                 // 处理错误
                 console.error(error);

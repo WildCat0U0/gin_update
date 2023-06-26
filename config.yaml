@@ -55,6 +55,7 @@ jwt:
     secret : skl3djfklasjdf4kljasoifja56sdklfj7alkskd # jwt密钥
     jwt_ttl: 43200
     jwt_blacklist_grace_period: 10
+    refresh_grace_period: 1800
 
 redis:
     host: "127.0.0.1"

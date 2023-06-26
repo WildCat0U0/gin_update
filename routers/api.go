@@ -13,7 +13,7 @@ import (
 // @title Gin_Start API
 // @description Gin_Start API
 // @version
-// @host localhost:8080
+// @host localhost:8888
 // @basePath /api
 func SetApiGroupRouters(router *gin.RouterGroup) {
 	router.GET("/ping", func(c *gin.Context) {
