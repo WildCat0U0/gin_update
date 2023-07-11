@@ -1,137 +1,158 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Logout Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.0/dist/sweetalert2.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.0/dist/sweetalert2.all.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.0/dist/sweetalert2.min.css" />
+    <style>
+        /* 导航栏样式 */
+        .sidenav {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #f1f1f1;
+            overflow-x: hidden;
+            padding-top: 20px;
+            /* 将边框改为尖角 */
+            border-image: url("https://i.imgur.com/TVKz7wH.png") 30 repeat;
+            border-width: 30px;
+        }
+
+        /* 导航栏链接样式 */
+        .sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: #000000;
+            display: block;
+        }
+
+        /* 导航栏链接悬停样式 */
+        .sidenav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* 内容区域样式 */
+        .main {
+            margin-left: 200px; /* 导航栏宽度 */
+            padding: 20px;
+        }
+
+        /* 下拉菜单样式 */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            display: block;
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: #000000;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            top: 100%;
+            left: 0;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            padding: 10px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* 内容样式 */
+        .content {
+            position: relative;
+            z-index: 0;
+            color: #000000;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        /* 链接样式 */
+        .content a {
+            background-color: #2e4a84;
+            color: #ffffff;
+            font-size: 30px;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* 链接悬停样式 */
+        .content a:hover {
+            background-color: #214182;
+        }
+
+        /* 底部链接样式 */
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-<h1>Welcome to the Logout Page</h1>
-<p>Click the button below to log out:</p>
+<!-- 导航栏 -->
+<div class="sidenav">
+    <a href="#">首页</a>
+    <div class="dropdown">
+        <a href="#" class="dropdown-toggle">产品列表</a>
+        <div class="dropdown-menu">
+            <a href="#">产品1</a>
+            <a href="#">产品2</a>
+            <a href="#">产品3</a>
+        </div>
+    </div>
+    <a href="login.html">登陆</a>
+    <a href="register/register.html">注册</a>
+    <!-- 联系我们链接 -->
+    <div class="footer">
+        联系我们
+    </div>
+</div>
 
-<button onclick="logout()">Logout</button>
+<!-- 内容区域 -->
+<div class="main">
+    <img src="img.png" alt="Logo" style="display: block; margin: 0 auto; width: 100%; height: 10%;" />
+    <div class="content">
+        <h1>您已成功退出</h1>
+        <p>感谢您使用我们的服务</p>
+        <a href="#">返回首页</a>
+    </div>
+</div>
 
+<!-- 引入 SweetAlert2 库 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.0/dist/sweetalert2.min.js"></script>
+
+<!-- JavaScript 代码 -->
 <script>
-    // 清除当前页面中保存的 Cookie
-    // function logout() {
-    //     fetch("http://localhost:8888/api/auth/logout",{
-    //         method:"GET",
-    //         headers:{
-    //             // 'Content-Type' : 'application/json',
-    //             'accept' : 'application/json'
-    //         },
-    //         credentials : "include",
-    //     })
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             // 处理 JSON 数据
-    //             const errorCode = data.error_code
-    //             const msg = data.message
-    //             if (errorCode !== 0) {
-    //                 // window.alert(`${msg}`)
-    //                 Swal.fire({
-    //                     title: "Tips",
-    //                     text: `${msg}`,
-    //                     icon: "error",
-    //                     confirmButtonText: "确定"
-    //                 })
-    //                 console.error(`Error code: ${errorCode}`);
-    //             } else {
-    //                 Swal.fire({
-    //                     title: '提示',
-    //                     text: '登出成功，3 秒后将跳转到另一个页面',
-    //                     icon: 'success',
-    //                     timer: 3000,
-    //                     timerProgressBar: true,
-    //                     showConfirmButton: false
-    //                 })
-    //                 // document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    //                 const cookies = document.cookie.split(";").reduce((cookies,cookie) => {
-    //                     const [name,value] = cookie.trim().split('=');
-    //                     cookies[name] = value;
-    //                     return cookies;
-    //                 },{})
-    //
-    //                 if (cookies['username']){
-    //                     delete cookies['username'];
-    //                 }else {
-    //                     return;
-    //                 }
-    //                 setTimeout(() => {
-    //                     window.location.href = 'login.html';
-    //                 }, 3000);
-    //             }
-    //
-    //         })
-    //         .catch(error => {
-    //             // 处理错误
-    //             console.error(error);
-    //         });
-    // }
-    function logout() {
-        fetch("http://localhost:8888/api/auth/info",{
-            method:"POST",
-            credentials : "include",
-        })
-            .then(response => response.json())
-            .then(data => {
-                // 处理 JSON 数据
-                const errorCode = data.error_code
-                const msg = data.message
-                if (errorCode !== 0) {
-                    // window.alert(`${msg}`)
-                    Swal.fire({
-                        title: "Tips",
-                        text: `${msg}`,
-                        icon: "error",
-                        confirmButtonText: "确定"
-                    })
-                    console.error(`Error code: ${errorCode}`);
-                } else {
-                    Swal.fire({
-                        title: '提示',
-                        text: '登出成功，3 秒后将跳转到另一个页面',
-                        icon: 'success',
-                        timer: 3,
-                        timerProgressBar: true,
-                        showConfirmButton: false
-                    })
-                    // const cookies = document.cookie.split(";").reduce((cookies,cookie) => {
-                    //     const [name,value] = cookie.trim().split('=');
-                    //     cookies[name] = value;
-                    //     return cookies;
-                    // },{})
-                    //
-                    // if (cookies['username']){
-                    //     delete cookies['username'];
-                    // }else {
-                    //     return;
-                    // }
-
-
-                        // const cookies = document.cookie.split(";");
-                        //
-                        // // 遍历每个键值对，查找名为 "username" 的 Cookie，并将其删除
-                        // for (let i = 0; i < cookies.length; i++) {
-                        //     const cookie = cookies[i].trim();
-                        //     if (cookie.startsWith("username=")) {
-                        //         // 将名为 "username" 的 Cookie 删除
-                        //         document.cookie = `${cookie}; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
-                        //     }
-                        // }
-                        // setTimeout(() => {
-                        //     window.location.href = 'login.html';
-                        // }, 3000);
-                    }
-                    })
-
-            .catch(error => {
-                // 处理错误
-                console.error(error);
-            });
-    }
+    // // 显示 SweetAlert2 弹窗
+    // Swal.fire({
+    //     title: '已成功退出',
+    //     text: '感谢您使用我们的服务',
+    //     icon: 'success',
+    //     confirmButtonText: '返回首页'
+    // }).then((result) => {
+    //     // 点击确认按钮后跳转到首页
+    //     if (result.isConfirmed) {
+    //         window.location.href = 'index.html';
+    //     }
+    // });
 </script>
 </body>
 </html>

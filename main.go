@@ -34,5 +34,11 @@ func main() {
 	} else {
 		global.App.Log.Info("Redis数据库初始化成功")
 	}
+	bootstrap.InitializeStorage()
+	if err != nil {
+		global.App.Log.Info("存储初始化失败")
+	} else {
+		global.App.Log.Info("存储初始化成功")
+	}
 	bootstrap.RunServer()
 }

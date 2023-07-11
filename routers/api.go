@@ -2,6 +2,7 @@ package routers
 
 import (
 	"Gin_Start/app/controllers/app"
+	"Gin_Start/app/controllers/common"
 	"Gin_Start/app/middleware"
 	"Gin_Start/app/services"
 	"github.com/gin-gonic/gin"
@@ -57,6 +58,7 @@ func SetApiGroupRouters(router *gin.RouterGroup) {
 		authRouter.POST("/auth/info", app.Info)
 		authRouter.POST("/auth/logout", app.Logout)
 		authRouter.POST("/auth/is_login", app.IsLogin)
+		authRouter.POST("/image_upload", common.ImageUpload)
 	}
 
 }
